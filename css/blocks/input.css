@@ -1,4 +1,6 @@
 .input {
+  left: 50%;
+  transform: translateX(-50%);
   margin: 0 auto;
   position: absolute;
   top: 263px;

@@ -30,6 +30,17 @@
   .finder__subtitle {
     font-size: 15px;
   }
+
+  .selector {
+    display: none;
+  }
+
+  .finder__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (max-width: 470px) {

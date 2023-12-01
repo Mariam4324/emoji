@@ -1,8 +1,8 @@
-@media (max-width: 1020px) {
+@media (max-width: 1100px) {
   .finder__wrapper {
-    display: grid;
-    /* grid-template-columns: repeat(2, 1fr); */
-    grid-template-columns: auto auto;
+    /* display: grid; */
+    /* grid-template-columns: auto auto; */
+    justify-content: center;
   }
 }
 

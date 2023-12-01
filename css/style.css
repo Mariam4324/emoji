@@ -3,4 +3,5 @@
 @import "./sections/finder_top.css";
 @import "./blocks/input.css";
 @import "./sections/finder_bottom.css";
+@import './blocks/switches.css';
 @import './media.css';

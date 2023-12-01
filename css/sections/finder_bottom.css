@@ -66,7 +66,7 @@
 
 .finder__footer {
   margin-top: 48px;
-  padding: 0 0 17px;
+  /* padding: 0 0 17px; */
 }
 
 .finder__line {
@@ -76,9 +76,9 @@
 }
 
 .finder__subtext {
-  margin-top: 13px;
+  margin-top: 30px;
   color: #6c757d;
-  text-align: center;
+  text-align: left;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;

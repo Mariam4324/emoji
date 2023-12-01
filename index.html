@@ -2,91 +2,100 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>emoji</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css" />
-    <script type="module" src="./js/script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>emoji</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script type="module" src="./js/script.js" defer></script>
 </head>
 
 <body>
-    <main>
+  <main>
+    <div class="finder__input__holder">
+      <div class="finder__top">
+        <div class="container">
+          <h1 class="finder__title">Emoji Finder</h1>
+          <p class="finder__subtitle">Find emoji by keywords</p>
+        </div>
+      </div>
 
-        <div class="finder__input__holder">
-            <div class="finder__top">
-                <div class="container">
-                    <h1 class="finder__title">Emoji Finder</h1>
-                    <p class="finder__subtitle">Find emoji by keywords</p>
-                </div>
-            </div>
+      <form action="#">
+        <input class="input" type="text" placeholder="Placeholder" />
+      </form>
+    </div>
 
-            <form action="#">
-                <input class="input" type="text" placeholder="Placeholder">
-            </form>
+    <section class="finder__bottom">
+      <div class="container">
+        <div class="finder__wrapper">
 
         </div>
 
 
-        <section class="finder__bottom">
-            <div class="container">
-                <div class="finder__wrapper">
-                    <!-- 1 -->
-                    <div class="finder__box">
-                        <img class="finder__img" src="./icons/100@1x.webp"
-                            srcset="./icons/100@1x.webp 1x, ./icons/100@2x.webp 2x" alt="emoji">
-                        <div class="finder__emoji__name">100</div>
-                        <div class="finder__emoji__info">Hundred, points, symbol, wow, win, perfect, parties</div>
-                    </div>
-                    <!-- 2 -->
-                    <div class="finder__box">
-                        <img class="finder__img" src="./icons/100@1x.webp"
-                            srcset="./icons/100@1x.webp 1x, ./icons/100@2x.webp 2x" alt="emoji">
-                        <div class="finder__emoji__name">100</div>
-                        <div class="finder__emoji__info">Hundred, points, symbol, wow, win, perfect, parties</div>
-                    </div>
-                    <!-- 3 -->
-                    <div class="finder__box">
-                        <img class="finder__img" src="./icons/100@1x.webp"
-                            srcset="./icons/100@1x.webp 1x, ./icons/100@2x.webp 2x" alt="emoji">
-                        <div class="finder__emoji__name">100</div>
-                        <div class="finder__emoji__info">Hundred, points, symbol, wow, win, perfect, parties</div>
-                    </div>
-                    <!-- 4 -->
-                    <div class="finder__box">
-                        <img class="finder__img" src="./icons/100@1x.webp"
-                            srcset="./icons/100@1x.webp 1x, ./icons/100@2x.webp 2x" alt="emoji">
-                        <div class="finder__emoji__name">100</div>
-                        <div class="finder__emoji__info">Hundred, points, symbol, wow, win, perfect, parties</div>
-                    </div>
-                    <!-- 5 -->
-                    <div class="finder__box">
-                        <img class="finder__img" src="./icons/100@1x.webp"
-                            srcset="./icons/100@1x.webp 1x, ./icons/100@2x.webp 2x" alt="emoji">
-                        <div class="finder__emoji__name">100</div>
-                        <div class="finder__emoji__info">Hundred, points, symbol, wow, win, perfect, parties</div>
-                    </div>
-                    <!-- 6 -->
-                    <div class="finder__box">
-                        <img class="finder__img" src="./icons/100@1x.webp"
-                            srcset="./icons/100@1x.webp 1x, ./icons/100@2x.webp 2x" alt="emoji">
-                        <div class="finder__emoji__name">100</div>
-                        <div class="finder__emoji__info">Hundred, points, symbol, wow, win, perfect, parties</div>
-                    </div>
 
-                </div>
 
-                <div class="finder__footer">
-                    <div class="finder__line"></div>
-                    <div class="finder__subtext">2022 © Made with love by me</div>
-                </div>
+        <div class="finder__footer">
+          <div class="finder__line"></div>
+
+
+
+
+          <div class="pages__holder">
+
+            <div class="pages__wrapper">
+
+              <button class="pages__switch">First</button>
+
+              <button class="pages__btn">1</button>
+              <button class="pages__btn">2</button>
+              <button class="pages__btn">3</button>
+              <button class="pages__btn">4</button>
+              <button class="pages__btn">5</button>
+
+              <button class="pages__switch pages__switch_blue">Last</button>
 
             </div>
-        </section>
 
-    </main>
+
+
+            <div class="selector">
+
+              <div class="selector__label">Per page</div>
+
+              <div class="selector__switch">
+
+                <div class="selector__number">12</div>
+
+                <svg class="selector__svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                  fill="none">
+                  <path d="M4 6L8 10L12 6" stroke="#ABB5BE" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+          <div class="finder__subtext">2022 © Made with love by me</div>
+
+        </div>
+
+
+
+
+
+
+      </div>
+    </section>
+
+
+  </main>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 @import "./config.css";
 @import "./layout.css";
+@import './fonts.css';
 @import "./sections/finder_top.css";
 @import "./blocks/input.css";
 @import "./sections/finder_bottom.css";

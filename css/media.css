@@ -1,0 +1,39 @@
+@media (max-width: 1020px) {
+  .finder__wrapper {
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 840px) {
+  .input {
+    max-width: 450px;
+  }
+
+  .finder__subtext {
+    font-size: 14px;
+  }
+
+  .finder__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .finder__title {
+    font-size: 50px;
+  }
+
+  .finder__subtitle {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 470px) {
+  .input {
+    max-width: 300px;
+  }
+}

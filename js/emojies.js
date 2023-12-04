@@ -9199,7 +9199,7 @@ export let emojies = [
 // суем в начало обертки функцию с разметками карточек, параметром берем каждый объект
 emojies.forEach((obj) => {
   let wrapper = document.querySelector(".finder__wrapper");
-  wrapper.prepend(createCard(obj));
+  wrapper.append(createCard(obj));
 });
 
 // вытаскиваем карточку и все элементы карточки

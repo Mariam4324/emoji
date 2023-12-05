@@ -9194,37 +9194,3 @@ export let emojies = [
   },
 ];
 
-// перебираем массив и параметром принимаем все объекты этого массива
-// вытаскиваем обертку карточек
-// суем в начало обертки функцию с разметками карточек, параметром берем каждый объект
-emojies.forEach((obj) => {
-  let wrapper = document.querySelector(".finder__wrapper");
-  wrapper.append(createCard(obj));
-});
-
-// вытаскиваем карточку и все элементы карточки
-// задаем им классы
-// присваиваем каждому элементу ключ объекта
-// суем все элементы карточки в саму карточку
-// на выходе возвращаем карточку
-function createCard(obj) {
-  let card = document.createElement("div");
-  let emojie = document.createElement("span");
-  let name = document.createElement("h2");
-  let info = document.createElement("p");
-
-  card.className = "finder__box";
-  emojie.className = "finder__img";
-  name.className = "finder__emoji__name";
-  info.className = "finder__emoji__info";
-
-  emojie.textContent = obj.symbol;
-  name.textContent = obj.title;
-  info.textContent = obj.keywords;
-
-  card.append(emojie, name, info);
-
-  return card;
-}
-// итого: в функции создания карточкм создается только одна карточка, мы ее параметром передаем
-// в функцию перебора массива и суем в обертку, и карточки создвются перебором

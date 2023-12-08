@@ -1,68 +1,29 @@
 import { emojies } from "./emojies.js";
 let input = document.querySelector(".input");
-
-function search() {
-  let inputValue = input.value;
-  emojies.filter((el) => {
-    // let check = el.title.includes(inputValue);
-  });
-}
-
-input.addEventListener("input", search);
-
-// function render() {}
-
-// function search(ev) {
-//   let inputValue = input.value;
-//   emojies.forEach((el) => {
-//     let emTitle = el.title;
-//     console.log(emTitle);
-//   });
-
-//   if (emTitle.includes(inputValue)) {
-//     console.log("есть");
-//   }
-// }
-
-// input.addEventListener("input", search);
-// ____
-// input.addEventListener("input", function () {
-//   let search = input.value.toLowerCase();
-//   emojies.filter((el) => {
-//     const cardText = el.title.toLowerCase();
-//     if (cardText.includes(search)) {
-//       el.style.display = "block";
-//     } else {
-//       el.style.display = "none";
-//     }
-//   });
-// });
-
-
-
-
-// _________________________________________________________
-// НИЖЕ ПЕРЕБОР
-
-// перебираем массив и параметром принимаем все объекты этого массива
-// вытаскиваем обертку карточек
-// суем в начало обертки функцию с разметками карточек, параметром берем каждый объект
 let wrapper = document.querySelector(".finder__wrapper");
 
-emojies.forEach((obj) => {
-  wrapper.append(createCard(obj));
-});
+// перебираем массив и параметром принимаем все объекты этого массива
+// очищаем обертку карточек
+// суем в начало обертки функцию с разметками карточек, параметром берем каждый объект
+// а в саму функцию renderEmoji передаем параметром arr, а при вызове функции аргументов принимаем массив emojies
+function renderEmoji(arr) {
+  wrapper.innerHTML = ` `;
+  arr.forEach((obj) => {
+    wrapper.append(createCard(obj));
+  });
+}
 
 // вытаскиваем карточку и все элементы карточки
 // задаем им классы
 // присваиваем каждому элементу ключ объекта
 // суем все элементы карточки в саму карточку
 // на выходе возвращаем карточку
+
 function createCard(obj) {
-  let card = document.createElement("div");
-  let emojie = document.createElement("span");
-  let name = document.createElement("h2");
-  let info = document.createElement("p");
+  const card = document.createElement("div");
+  const emojie = document.createElement("span");
+  const name = document.createElement("h2");
+  const info = document.createElement("p");
 
   card.className = "finder__box";
   emojie.className = "finder__img";
@@ -76,5 +37,24 @@ function createCard(obj) {
   card.append(emojie, name, info);
   return card;
 }
+
+// ставим слушатель событий на функцию search и параметром передаем событие. Создаем inputValue равный целевому обьекту (самому инпуту), создаем переменную с фильтром по нужному условию  и передаем параметром эту переменную в функцию renderEmoji
+function search(evt) {
+  const inputValue = evt.target.value;
+  const filter = emojies.filter((el) => el.title.toLowerCase().includes(inputValue.toLowerCase()));
+  renderEmoji(filter);
+}
+
+input.addEventListener("input", search);
+
+renderEmoji(emojies);
+
 // итого: в функции создания карточкм создается только одна карточка, мы ее параметром передаем
 // в функцию перебора массива и суем в обертку, и карточки создвются перебором
+
+
+
+
+
+
+

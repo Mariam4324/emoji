@@ -41,7 +41,12 @@ function createCard(obj) {
 // ставим слушатель событий на функцию search и параметром передаем событие. Создаем inputValue равный целевому обьекту (самому инпуту), создаем переменную с фильтром по нужному условию  и передаем параметром эту переменную в функцию renderEmoji
 function search(evt) {
   const inputValue = evt.target.value;
-  const filter = emojies.filter((el) => el.title.toLowerCase().includes(inputValue.toLowerCase()));
+  const filter = emojies.filter(
+    (el) =>
+      el.title.toLowerCase().includes(inputValue.toLowerCase()) ||
+      el.keywords.toLowerCase().includes(inputValue.toLowerCase())
+  );
+
   renderEmoji(filter);
 }
 
@@ -51,10 +56,3 @@ renderEmoji(emojies);
 
 // итого: в функции создания карточкм создается только одна карточка, мы ее параметром передаем
 // в функцию перебора массива и суем в обертку, и карточки создвются перебором
-
-
-
-
-
-
-

@@ -43,8 +43,8 @@ function search(evt) {
   const inputValue = evt.target.value;
   const filter = emojies.filter(
     (el) =>
-      el.title.toLowerCase().includes(inputValue.toLowerCase()) ||
-      el.keywords.toLowerCase().includes(inputValue.toLowerCase())
+      el.title.toLowerCase().trim().includes(inputValue.toLowerCase().trim()) ||
+      el.keywords.toLowerCase().trim().includes(inputValue.toLowerCase().trim())
   );
 
   renderEmoji(filter);
